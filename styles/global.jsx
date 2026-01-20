@@ -40,6 +40,14 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 10,
   },
+  errorText: {
+    color: "crimson",
+    marginBottom: 10,
+    marginTop: 10,
+    textAlign: "center",
+    fontSize: 12,
+    fontFamily: "nunito-bold",
+  },
 });
 
 export const images = {

@@ -26,21 +26,28 @@ export default function Layout() {
             fontFamily: "nunito-bold",
           },
           headerStyle: {
-            backgroundColor: "orange",
+            // backgroundColor: "blue",
           },
-          headerTintColor: "white",
           headerTitle: () => (
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Image
                 source={require("../../assets/heart_logo.png")}
                 style={{ width: 20, height: 20, marginRight: 8 }}
               />
-              <Text
-                style={{ color: "white", fontWeight: "bold", fontSize: 22 }}
-              >
+              <Text style={{ fontWeight: "bold", fontSize: 22 }}>
                 {getTitleFromRoute(route.name)}
               </Text>
             </View>
+          ),
+          headerBackground: () => (
+            <Image
+              source={require("../../assets/game_bg.png")}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+              resizeMode="cover"
+            />
           ),
         })}
       >

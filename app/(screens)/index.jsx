@@ -54,6 +54,13 @@ const Index = () => {
     ); // Avoid deprecated AppLoading
   }
 
+  const addReview = (review) => {
+    review.key = Math.random().toString();
+    setReviews((currentReviews) => {
+      return [review, ...currentReviews];
+    });
+    setModelOpen(false);
+  };
   return (
     <View style={globalStyles.container}>
       <Modal visible={modelOpen} animationType="slide">
@@ -64,7 +71,7 @@ const Index = () => {
             onPress={() => setModelOpen(false)}
             style={globalStyles.moddleToggle}
           />
-          <ReviewForm />
+          <ReviewForm addReview={addReview} />
         </View>
       </Modal>
 
